@@ -55,6 +55,12 @@ app.get('/bad', (req, res) => {
 });
 app.use(express.static(__dirname + '/public'));
 
+app.get('/products', (req, res) => {
+  res.render('products.hbs', {
+    pageTitle: 'Products'
+  });
+})
+
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}.`);
 });
